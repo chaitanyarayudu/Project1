@@ -1,118 +1,23 @@
-pipeline 
-{
-
+pipeline {
     agent any
-    stages
-    {
-     stage(checkout code)
-     {
-        steps{ 
-            script{
-                try{
 
-                }
-
-                catch{
-
-                }
+    stages {
+        stage('checkout code') {
+            steps {
+                sh 'echo "checkout code from dev branch"'
+            }
+            stage('sonar report') {
+            steps {
+                sh 'echo "checkout code from dev branch"'
+            }
+            stage('built') {
+            steps {
+                sh 'echo "checkout code from dev branch"'
+            }
+            stage('upload to nexus') {
+            steps {
+                sh 'echo "checkout code from dev branch"'
             }
         }
-     }
-
-     stage(sonar report)
-     {
-        steps{
-            script{
-                try{
-
-                }
-
-                catch{
-
-                }
-            }
-
-        }
-     }
-
-     stage(build artifact)
-     {
-        steps{
-            script{
-                try{
-
-                }
-                catch{
-
-                }
-            }
-        }
-     }
-
-     stage(build image)
-     {
-        steps{
-            script{
-                try{
-
-                }
-                catch{
-
-                }
-            }
-        }
-     }
-      
-      stage(upload image into Nexus)
-      {
-        steps{
-            script{
-                try{
-
-                }
-                catch{
-
-                }
-            }
-        }
-      }
-
-      stage(Deploy to Dev)
-      {
-        steps{
-            script{
-                try{
-
-                }
-                catch{
-
-                }
-            }
-        }
-      }
-       
-     stage(Promoting to QA branch)
-     {
-        steps{
-
-        }
-     }
-     post
-     {
-       successfull
-       {
-
-       }
-       failure
-       {
-
-       }
-       always
-       {
-        
-       }
-     }
-
-
     }
 }
