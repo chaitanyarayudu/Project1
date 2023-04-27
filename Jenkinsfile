@@ -1,23 +1,11 @@
 pipeline {
+    
     agent any
-
-    stages {
-        stage('checkout code') {
-            steps {
-                sh 'echo "checkout code from dev branch"'
-            }
-            stage('sonar report') {
-            steps {
-                sh 'echo "checkout code from dev branch"'
-            }
-            stage('built') {
-            steps {
-                sh 'echo "checkout code from dev branch"'
-            }
-            stage('upload to nexus') {
-            steps {
-                sh 'echo "checkout code from dev branch"'
-            }
+    stages
+    {
+     stage
+        {
+            steps{ git branch: 'Dev', url: 'https://github.com/chaitanyarayudu/jenkins-example.git' }
         }
     }
 }
